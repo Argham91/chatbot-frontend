@@ -1,3 +1,4 @@
+'''
 from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import List
@@ -13,7 +14,7 @@ CHAT_MEMORY = {}
 class ChatRequest(BaseModel):
     question: str
     session_id: str
-    user_role: str   # ✅ ADD THIS
+    user_role: str   
 
 @app.post("/chat")
 async def chat(request: ChatRequest):
@@ -65,3 +66,17 @@ async def chat_stream(request: ChatRequest):
             yield str(step) + "\n"
 
     return stream()
+'''
+
+from fastapi import FastAPI
+from mock_db import get_messages, add_message
+
+app = FastAPI()
+
+@app.get("/messages")
+def fetch_messages():
+    return get_messages()
+
+@app.post("/messages")
+def create_message(msg: dict):
+    return add_message(msg)
