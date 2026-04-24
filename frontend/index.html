@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mines Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#0f62fe', // IBM Blue-ish
+              accent: '#00bfa5', // Teal
+              warning: '#ffb020',
+              danger: '#da1e28',
+              background: '#f7f9fc',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+      /* Normalise zoom — app was designed at 90% browser zoom.
+         This ensures correct display at default 100% zoom on any machine.
+         Remove this rule if switching to a fully rem/fluid layout in future. */
+      html {
+        zoom: 0.9;
+        min-width: calc(100vw / 0.9);
+        min-height: calc(100vh / 0.9);
+        overflow-x: hidden;
+        background-color: #f9fafb;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f9fafb;
+        min-width: calc(100vw / 0.9);
+        min-height: calc(100vh / 0.9);
+        overflow-x: hidden;
+      }
+      /* Custom scrollbar for better aesthetics */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #c1c1c1; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #a8a8a8;
+      }
+      /* Remove trailing white-space at the bottom of every page:
+         the last section's margin-bottom is useless below the fold. */
+      main > div > *:last-child {
+        margin-bottom: 0 !important;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "recharts": "https://esm.sh/recharts@^3.7.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
+    "axios": "https://esm.sh/axios@^1.13.5"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
