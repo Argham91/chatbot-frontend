@@ -1,0 +1,64 @@
+node_modules/
+.vite/
+dist/
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+frontend/node_modules
+frontend/.env
+dist
+dist-ssr
+*.local
+
+rest-api/venv
+rest-api/.env
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Virtual environment
+env/
+
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+
+# setup files
+res-api/.env
+
+# Claude Code workspace
+.claude/
+
+# Zip archives
+*.zip
+
+# Temporary analysis/debug scripts
+rest-api/temp_*.py
+rest-api/nul
+
+# Temporary output files
+excel_analysis_output.txt
+
+# Word documents
+*.docx
